@@ -6,6 +6,10 @@ A project to create a custom macropad based on the Raspberry Pi Pico, including 
 
 * Don't use GP15! - [adafruit/circuitpython#4034](https://github.com/adafruit/circuitpython/issues/4034)
 
+## Current schematic
+
+![Current schematic](https://raw.githubusercontent.com/codemicro/macropad/master/.github/current.png)
+
 ## Components
 
 #### Purchased:
