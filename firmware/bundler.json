@@ -1,0 +1,36 @@
+[
+    {
+        "repo": "adafruit/Adafruit_CircuitPython_Debouncer",
+        "assetNameRegex": "adafruit-circuitpython-debouncer-6\\.x.+\\.zip",
+        "tagRegex": "1\\.\\d+\\.\\d+",
+        "files": [
+            {
+                "source": "{0}/lib/adafruit_debouncer.mpy",
+                "output": "adafruit_debouncer.mpy"
+            }
+        ]
+    },
+    {
+        "repo": "adafruit/Adafruit_CircuitPython_HID",
+        "assetNameRegex": "adafruit-circuitpython-hid-6\\.x.+\\.zip",
+        "tagRegex": "4\\.\\d+\\.\\d+",
+        "files": [
+            {
+                "source": "{0}/lib/adafruit_hid/__init__.mpy",
+                "output": "adafruit_hid/__init__.mpy"
+            },
+            {
+                "source": "{0}/lib/adafruit_hid/keyboard.mpy",
+                "output": "adafruit_hid/keyboard.mpy"
+            },
+            {
+                "source": "{0}/lib/adafruit_hid/keycode.mpy",
+                "output": "adafruit_hid/keycode.mpy"
+            },
+            {
+                "source": "{0}/lib/adafruit_hid/keyboard_layout_us.mpy",
+                "output": "adafruit_hid/keyboard_layout_us.mpy"
+            }
+        ]
+    }
+]
