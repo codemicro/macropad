@@ -6,6 +6,7 @@ A project to create a custom macropad based on the Raspberry Pi Pico, including 
 
 * Don't use GP15! - [adafruit/circuitpython#4034](https://github.com/adafruit/circuitpython/issues/4034)
 * Raspberry Pi Pico Eagle CAD library - [codemicro/pico-eagle](https://github.com/codemicro/pico-eagle)
+* Cherry MX keyswitches Eagle CAD library - [cherrymx-eagle](https://github.com/c0z3n/cherrymx-eagle)
 
 ## Current schematic
 
