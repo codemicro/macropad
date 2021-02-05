@@ -10,7 +10,7 @@ A project to create a custom macropad based on the Raspberry Pi Pico, including 
 
 ## Current schematic
 
-![Current schematic](https://raw.githubusercontent.com/codemicro/macropad/master/.github/current.png)
+![Current schematic](https://raw.githubusercontent.com/codemicro/macropad/master/.github/images/currentschem.png)
 
 ## Components
 
