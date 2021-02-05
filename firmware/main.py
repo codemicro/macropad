@@ -1,31 +1,42 @@
 import digitalio
 import board
 
-import adafruit_debouncer as db
 import time
 
-import usb_hid
-from adafruit_hid.keyboard import Keyboard
-from adafruit_hid.keycode import Keycode
-from adafruit_hid.keyboard_layout_us import KeyboardLayoutUS
+# led = digitalio.DigitalInOut(board.GP3)
+# led.direction = digitalio.Direction.OUTPUT
 
-led = digitalio.DigitalInOut(board.GP25)
-led.direction = digitalio.Direction.OUTPUT
+# This code is solely implementing a matrix of buttons
 
-inp_pin = digitalio.DigitalInOut(board.GP13)
-inp_pin.direction = digitalio.Direction.INPUT
-inp_pin.pull = digitalio.Pull.UP
+colone = digitalio.DigitalInOut(board.GP16)
+colone.direction = digitalio.Direction.INPUT
+colone.pull = digitalio.Pull.DOWN
 
-button = db.Debouncer(inp_pin)
+coltwo = digitalio.DigitalInOut(board.GP17)
+coltwo.direction = digitalio.Direction.INPUT
+coltwo.pull = digitalio.Pull.DOWN
 
-kbd = Keyboard(usb_hid.devices)
-uskb = KeyboardLayoutUS(kbd)
+rowone = digitalio.DigitalInOut(board.GP0)
+rowone.direction = digitalio.Direction.OUTPUT
+
+rowtwo = digitalio.DigitalInOut(board.GP1)
+rowtwo.direction = digitalio.Direction.OUTPUT
 
 while True:
-    button.update()
-    if button.fell:
-        kbd.send(Keycode.WINDOWS, Keycode.R)
-        time.sleep(0.25)
-        uskb.write("chrome.exe")
-        kbd.send(Keycode.ENTER)
-        led.value = not led.value
+    rowone.value = True
+    if colone.value:
+        print("row1 col1")
+        time.sleep(0.1)
+    if coltwo.value:
+        print("row1 col2")
+        time.sleep(0.1)
+    rowone.value = False
+
+    rowtwo.value = True
+    if colone.value:
+        print("row2 col1")
+        time.sleep(0.1)
+    if coltwo.value:
+        print("row2 col2")
+        time.sleep(0.1)
+    rowtwo.value = False
