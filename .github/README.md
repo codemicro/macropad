@@ -37,12 +37,12 @@ A project to create a custom macropad based on the Raspberry Pi Pico, including 
 
 #### For final product
 
-| Component               | SKU    | Vendor           | Qty. | Per unit | Total |
-| ----------------------- | ------ | ---------------- | ---- | -------- | ----- |
-| Pico female headers     | 103530 | The Pi Hut       | 1    | 1.00     | 1.00  |
-| Relegendable keycaps    |        | Mechboards.co.uk | 9    | 1.50     | 13.50 |
-| Kailh Box Navy switches |        | Mechboards.co.uk | 2    | 4.25     | 8.50  |
-| Custom PCBs             |        | JLC PCB          | 1    | 6.81     | 6.81  |
+| Component                    | SKU    | Vendor           | Qty. | Per unit | Total |
+| ---------------------------- | ------ | ---------------- | ---- | -------- | ----- |
+| Pico female headers          | 103530 | The Pi Hut       | 1    | 1.00     | 1.00  |
+| Relegendable keycaps         |        | Mechboards.co.uk | 9    | 1.50     | 13.50 |
+| Gateron Ink Blue keyswitches |        | Mechboards.co.uk | 1    | 7.00     | 7.00  |
+| Custom PCBs                  |        | JLC PCB          | 1    | 6.81     | 6.81  |
 
 #### For both prototyping and final
 
@@ -57,6 +57,6 @@ A project to create a custom macropad based on the Raspberry Pi Pico, including 
 | Stage     | Total |
 | --------- | ----- |
 | Prototype | 14.50 |
-| Final     | 37.31 |
-| All       | 44.31 |
+| Final     | 35.81 |
+| All       | 42.81 |
 
