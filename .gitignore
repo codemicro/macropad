@@ -1,4 +1,9 @@
 
+# Eagle CAD temp files
+*.pro
+*.job
+*.b#*
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
