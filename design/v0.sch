@@ -5161,7 +5161,7 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.3048" drill="0">
 </class>
 </classes>
 <parts>
@@ -5203,9 +5203,9 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="S2" library="switch-omron" library_urn="urn:adsk.eagle:library:377" deviceset="10-XX" device="" package3d_urn="urn:adsk.eagle:package:27496/1"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="VMTA55" package3d_urn="urn:adsk.eagle:package:26121/2" value="9.76k"/>
-<part name="S1" library="switch-omron" library_urn="urn:adsk.eagle:library:377" deviceset="10-XX" device="" package3d_urn="urn:adsk.eagle:package:27496/1"/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="VMTA55" package3d_urn="urn:adsk.eagle:package:26121/2" value="9.76k"/>
+<part name="S1" library="switch-omron" library_urn="urn:adsk.eagle:library:377" deviceset="10-XX" device="" package3d_urn="urn:adsk.eagle:package:27496/1"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="VMTA55" package3d_urn="urn:adsk.eagle:package:26121/2" value="9.76k"/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
@@ -5341,7 +5341,7 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 <attribute name="NAME" x="73.66" y="90.17" size="1.778" layer="95"/>
 <attribute name="VALUE" x="79.375" y="87.63" size="1.778" layer="96"/>
 </instance>
-<instance part="R2" gate="G$1" x="91.44" y="83.82" smashed="yes" rot="R180">
+<instance part="R1" gate="G$1" x="91.44" y="83.82" smashed="yes" rot="R180">
 <attribute name="NAME" x="95.25" y="82.3214" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="95.25" y="87.122" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -5349,7 +5349,7 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 <attribute name="NAME" x="73.66" y="107.95" size="1.778" layer="95"/>
 <attribute name="VALUE" x="79.375" y="105.41" size="1.778" layer="96"/>
 </instance>
-<instance part="R1" gate="G$1" x="91.44" y="101.6" smashed="yes" rot="R180">
+<instance part="R2" gate="G$1" x="91.44" y="101.6" smashed="yes" rot="R180">
 <attribute name="NAME" x="95.25" y="100.1014" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="95.25" y="104.902" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -5644,7 +5644,7 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 <net name="N$4" class="0">
 <segment>
 <pinref part="S2" gate="1" pin="S"/>
-<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="R1" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="83.82" x2="83.82" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="83.82" x2="86.36" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="83.82" x2="83.82" y2="91.44" width="0.1524" layer="91"/>
@@ -5658,7 +5658,7 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 <net name="N$9" class="0">
 <segment>
 <pinref part="S1" gate="1" pin="S"/>
-<pinref part="R1" gate="G$1" pin="2"/>
+<pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="81.28" y1="101.6" x2="83.82" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="101.6" x2="86.36" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="101.6" x2="83.82" y2="96.52" width="0.1524" layer="91"/>
@@ -5671,8 +5671,8 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 </net>
 <net name="N$12" class="0">
 <segment>
-<pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="96.52" y1="101.6" x2="96.52" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="86.36" x2="96.52" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="86.36" x2="99.06" y2="86.36" width="0.1524" layer="91"/>
