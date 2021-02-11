@@ -16,5 +16,5 @@
 ## Untested/questions
 
 * Needs to be tested with two extra buttons
-  * Is a diode or two required?
-  * Could pressing one button pull both input lines low?
+  * ~~Is a diode or two required?~~ No
+  * ~~Could pressing one button pull both input lines low?~~ If you're using a single resistor across the two, otherwise no.
