@@ -3,6 +3,7 @@
 *.pro
 *.job
 *.b#*
+*.s#*
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -242,3 +243,7 @@ modules.xml
 
 # Sonarlint plugin
 .idea/sonarlint
+
+design/v0 bottom.png
+
+design/v0.png
