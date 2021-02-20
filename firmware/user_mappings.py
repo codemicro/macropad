@@ -1,6 +1,5 @@
-import time
-
 import usb_hid
+import time
 from keyboard_controller import Keyboard, Keycode
 
 keyboard = Keyboard(usb_hid.devices)
@@ -23,38 +22,35 @@ def matrix_0_0():
 
 
 def matrix_0_1():
-    keyboard.send(Keycode.WINDOWS, Keycode.R)
-    time.sleep(0.25)
-    keyboard.write("calc")
-    keyboard.send(Keycode.ENTER)
+    print("0_1")
 
 
 def matrix_0_2():
-    pass
+    print("0_2")
 
 
 def matrix_1_0():
-    pass
+    print("1_0")
 
 
 def matrix_1_1():
-    pass
+    print("1_1")
 
 
 def matrix_1_2():
-    pass
+    print("1_2")
 
 
 def matrix_2_0():
-    pass
+    print("2_0")
 
 
 def matrix_2_1():
-    pass
+    print("2_1")
 
 
 def matrix_2_2():
-    pass
+    print("2_2")
 
 
 # each key in matrix_mapping is the following: (is shift pressed, matrix col, matrix row)

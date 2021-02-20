@@ -1,6 +1,58 @@
 import time
+import pins
 
-time.sleep(2)  # this is needed to prevent USB initialisation failing (I think?)
-import user_mappings
+# user_mappings must be imported ahead of everything else since other stuff might also import it
+# except those won't have checks
+try:
+    
+    import user_mappings
+except Exception as e:
+    pins.WORKING_LED.value = False
+    while True:
+        print("Error loading user_mappings.py:", e)
+        pins.BAD_LED.value = not pins.BAD_LED.value
+        time.sleep(0.5)
 
-user_mappings.matrix_mapping[(False, 0, 0)]()
+import led_controller as led_c
+
+led_c.blink(pins.WORKING_LED, 2, after=False)  # this is needed to prevent USB initialisation being stepped on by other stuff (I think?)
+led_c.blink(pins.OK_LED, 0.2)
+
+class LetMeOut(Exception):
+    pass
+
+while True:
+
+    pins.update_debounce()
+
+    shift_pressed = False
+    if None not in user_mappings.SHIFT_KEY:
+        shift_pressed = pins.MATRIX[user_mappings.SHIFT_KEY[1]][user_mappings.SHIFT_KEY[0]].value
+
+    matrix_key_pressed = None
+
+    try:
+        for ri in range(len(pins.MATRIX)):
+            for ci in range(len(pins.MATRIX[ri])):
+                if pins.MATRIX[ri][ci].rose:
+                    if (ri, ci) != user_mappings.SHIFT_KEY:
+                        matrix_key_pressed = (ri, ci)
+                        raise LetMeOut  # nested loop woes        
+    except LetMeOut:
+        pass
+
+    if matrix_key_pressed is not None:
+
+        mapping_key = (shift_pressed, matrix_key_pressed[0], matrix_key_pressed[1])
+
+        led_c.set_led(pins.WORKING_LED, True)
+        try:
+            user_mappings.matrix_mapping[mapping_key]()
+            led_c.set_led(pins.WORKING_LED, False)
+            led_c.blink(pins.OK_LED, 0.1, after=False)
+
+        except Exception as e:
+            led_c.set_led(pins.WORKING_LED, False)
+            print("Error calling function", str(mapping_key) + ":", e)
+            for i in range(3):
+                led_c.blink(pins.BAD_LED, 0.2)
