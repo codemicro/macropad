@@ -30,6 +30,14 @@
             {
                 "source": "{0}/lib/adafruit_hid/keyboard_layout_us.mpy",
                 "output": "adafruit_hid/keyboard_layout_us.mpy"
+            },
+            {
+                "source": "{0}/lib/adafruit_hid/consumer_control.mpy",
+                "output": "adafruit_hid/consumer_control.mpy"
+            },
+            {
+                "source": "{0}/lib/adafruit_hid/consumer_control_code.mpy",
+                "output": "adafruit_hid/consumer_control_code.mpy"
             }
         ]
     }
