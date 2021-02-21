@@ -8,55 +8,25 @@ A project to create a custom macropad based on the Raspberry Pi Pico, including 
 
 ## Links
 
-* Don't use GP15! - [adafruit/circuitpython#4034](https://github.com/adafruit/circuitpython/issues/4034)
 * Raspberry Pi Pico Eagle CAD library - [codemicro/pico-eagle](https://github.com/codemicro/pico-eagle)
-* Cherry MX keyswitches Eagle CAD library - [c0z3n/cherrymx-eagle](https://github.com/c0z3n/cherrymx-eagle)
+* Cherry MX keyswitche Eagle CAD library - [c0z3n/cherrymx-eagle](https://github.com/c0z3n/cherrymx-eagle)
 
-## Current schematic
+## rev0 complete!
 
-![Current schematic](https://raw.githubusercontent.com/codemicro/macropad/master/.github/images/currentschem.png)
+| **Board scan**                                               | **Assembled**                                                | **Schematic**                                                |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![rev0 board scan](https://raw.githubusercontent.com/codemicro/macropad/master/.github/images/rev0scan.jpg) | ![rev0 assembled](https://raw.githubusercontent.com/codemicro/macropad/master/.github/images/rev0.png) | ![rev0 schematic](https://raw.githubusercontent.com/codemicro/macropad/master/.github/images/rev0schem.png) |
 
-## Components
+Functionally perfect, ideal LED position would be below the Pi Pico and not alongside it, however.
 
-#### Purchased:
+### Improvements
 
-* Raspberry Pi Pico
-* Male headers
-
-#### Potential savings
-
-* Different/less keyswitches
-* Standard blank keycaps, if small numbers can be found
-
-#### For prototyping
-
-| Component             | SKU    | Vendor     | Qty. | Per unit | Total |
-| --------------------- | ------ | ---------- | ---- | -------- | ----- |
-| Perfboard plates      | 103037 | The Pi Hut | 1    | 4.50     | 4.50  |
-| 22AWG solid core wire | ADA288 | The Pi Hut | 1    | 2.50     | 2.50  |
-
-#### For final product
-
-| Component                    | SKU    | Vendor           | Qty. | Per unit | Total |
-| ---------------------------- | ------ | ---------------- | ---- | -------- | ----- |
-| Pico female headers          | 103530 | The Pi Hut       | 1    | 1.00     | 1.00  |
-| Relegendable keycaps         |        | Mechboards.co.uk | 9    | 1.50     | 13.50 |
-| Gateron Ink Blue keyswitches |        | Mechboards.co.uk | 1    | 7.00     | 7.00  |
-| Custom PCBs                  |        | JLC PCB          | 1    | 6.81     | 6.81  |
-
-#### For both prototyping and final
-
-| Component          | SKU     | Vendor     | Qty. | Per unit | Total |
-| ------------------ | ------- | ---------- | ---- | -------- | ----- |
-| 4.7k ohm resistors | 103252  | The Pi Hut | 2    | 1.00     | 2.00  |
-| 1N4001 diode       | ADA755  | The Pi Hut | 2    | 1.50     | 3.00  |
-| 3mm LEDs           | ADA4202 | The Pi Hut | 1    | 2.50     | 2.50  |
-
-#### Totals
-
-| Stage     | Total |
-| --------- | ----- |
-| Prototype | 14.50 |
-| Final     | 35.81 |
-| All       | 42.81 |
+* Option for a small OLED I2C OLED display (like [this 0.96" one](https://www.amazon.co.uk/MakerHawk-Display-Module-128X64-Arduino/dp/B0777HHQDT/ref=sr_1_5?crid=BC8NAEW87Q8G&dchild=1&keywords=0.96+oled&qid=1613933637&sprefix=0.96%2Caps%2C174&sr=8-5))
+* Hotswap keyswitch sockets
+* Multiple PCB layers, so the Pico or other microcontroller can be sandwiched inbetween
+* Perhaps a different microcontroller, like the Pro Micro?
+  * The Pico is more affordable than a genuine Pro Micro but [this thing](https://www.sparkfun.com/products/15795) does look super cool
+* Pico SMD support using castellations instead of header pins
+  * Maybe options for both on the same board?
+* More/RGB LEDs
 
