@@ -13,47 +13,51 @@ ENABLE_LEDS = True
 # (None, None) can be used to disable the shift key
 SHIFT_KEY = (None, None)
 
+# this value allows you define the number of layers available on the macropad.
+# if set to 1 or None, only one layer is ever used. The layer number is provided 
+# to any of the below functions that is called.
+NUM_LAYERS = 1
 
-def matrix_0_0():
+def matrix_0_0(layer):
     keyboard.send(Keycode.WINDOWS, Keycode.R)
     time.sleep(0.25)
     keyboard.write("chrome.exe")
     keyboard.send(Keycode.ENTER)
 
 
-def matrix_0_1():
-    print("0_1")
+def matrix_0_1(layer):
+    print("0_1", layer)
 
 
-def matrix_0_2():
-    print("0_2")
+def matrix_0_2(layer):
+    print("0_2", layer)
 
 
-def matrix_1_0():
-    print("1_0")
+def matrix_1_0(layer):
+    print("1_0", layer)
 
 
-def matrix_1_1():
-    print("1_1")
+def matrix_1_1(layer):
+    print("1_1", layer)
 
 
-def matrix_1_2():
-    print("1_2")
+def matrix_1_2(layer):
+    print("1_2", layer)
 
 
-def matrix_2_0():
-    print("2_0")
+def matrix_2_0(layer):
+    print("2_0", layer)
 
 
-def matrix_2_1():
-    print("2_1")
+def matrix_2_1(layer):
+    print("2_1", layer)
 
 
-def matrix_2_2():
-    print("2_2")
+def matrix_2_2(layer):
+    print("2_2", layer)
 
 
-# each key in matrix_mapping is the following: (is shift pressed, matrix col, matrix row)
+# each key in matrix_mapping is the following: (is shift pressed?, matrix col, matrix row)
 
 # matrix numbering is as follows
 #   0,0  |  0,1  |  0,2

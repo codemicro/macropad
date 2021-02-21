@@ -21,9 +21,23 @@ led_c.blink(pins.OK_LED, 0.2)
 class LetMeOut(Exception):
     pass
 
+current_layer = 0
+
 while True:
 
     pins.update_debounce()
+
+    if user_mappings.NUM_LAYERS != 1 and user_mappings.NUM_LAYERS is not None:
+        if pins.BUTTON_ONE_DEBOUNCE.fell:
+            current_layer += 1
+            if current_layer >= user_mappings.NUM_LAYERS:
+                current_layer -= user_mappings.NUM_LAYERS
+
+            for _ in range(current_layer + 1):
+                led_c.blink(pins.OK_LED, 0.2)
+        elif pins.BUTTON_TWO_DEBOUNCE.fell:
+            for _ in range(current_layer + 1):
+                led_c.blink(pins.OK_LED, 0.2)
 
     shift_pressed = False
     if None not in user_mappings.SHIFT_KEY:
@@ -47,7 +61,7 @@ while True:
 
         led_c.set_led(pins.WORKING_LED, True)
         try:
-            user_mappings.matrix_mapping[mapping_key]()
+            user_mappings.matrix_mapping[mapping_key](current_layer)
             led_c.set_led(pins.WORKING_LED, False)
             led_c.blink(pins.OK_LED, 0.1, after=False)
 
