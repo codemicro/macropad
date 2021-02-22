@@ -33,8 +33,8 @@ def matrix_0_2(layer):
     print("0_2", layer)
 
 
-def matrix_1_0(layer):
-    print("1_0", layer)
+def toggle_teams_mute(layer):
+    keyboard.send(Keycode.CONTROL, Keycode.SHIFT, Keycode.M)
 
 
 def matrix_1_1(layer):
@@ -45,33 +45,27 @@ def matrix_1_2(layer):
     print("1_2", layer)
 
 
-def matrix_2_0(layer):
-    # play/pause
+def media_play_pause(layer):
     keyboard.send_media(MediaKeycode.PLAY_PAUSE)
 
 
-def matrix_2_0_shift(layer):
-    # stop
+def media_stop(layer):
     keyboard.send_media(MediaKeycode.STOP)
 
 
-def matrix_2_1(layer):
-    # previous
+def media_previous(layer):
     keyboard.send_media(MediaKeycode.SCAN_PREVIOUS_TRACK)
 
 
-def matrix_2_1_shift(layer):
-    # rewind
+def media_rewind(layer):
     keyboard.send_media(MediaKeycode.REWIND)
 
 
-def matrix_2_2(layer):
-    # next
+def media_next(layer):
     keyboard.send_media(MediaKeycode.SCAN_NEXT_TRACK)
 
 
-def matrix_2_2_shift(layer):
-    # fast-forward
+def media_fast_forward(layer):
     keyboard.send_media(MediaKeycode.FAST_FORWARD)
 
 
@@ -86,13 +80,13 @@ matrix_mapping = {
     (False, 0, 0): matrix_0_0,
     (False, 0, 1): matrix_0_1,
     (False, 0, 2): matrix_0_2,
-    (False, 1, 0): matrix_1_0,
+    (False, 1, 0): toggle_teams_mute,
     (False, 1, 1): matrix_1_1,
     (False, 1, 2): matrix_1_2,
-    (False, 2, 0): matrix_2_0,
-    (False, 2, 1): matrix_2_1,
-    (False, 2, 2): matrix_2_2,
-    (True, 2, 0): matrix_2_0_shift,
-    (True, 2, 1): matrix_2_1_shift,
-    (True, 2, 2): matrix_2_2_shift,
+    (False, 2, 0): media_play_pause,
+    (True, 2, 0): media_stop,
+    (False, 2, 1): media_previous,
+    (True, 2, 1): media_rewind,
+    (False, 2, 2): media_next,
+    (True, 2, 2): media_fast_forward,
 }
