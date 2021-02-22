@@ -5212,6 +5212,19 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 <sheets>
 <sheet>
 <plain>
+<text x="132.08" y="93.98" size="1.778" layer="97">Copyright Thomas Pain 2021
+
+This source describes Open Hardware and is licensed under the CERN-OHL-P
+v2
+
+You may redistribute and modify this documentation and make products 
+using it under the terms of the CERN-OHL-P v2 (https:/cern.ch/cern-ohl).
+This documentation is distributed WITHOUT ANY EXPRESS OR IMPLIED
+WARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS
+FOR A PARTICULAR PURPOSE. Please see the CERN-OHL-P v2 for applicable
+conditions
+
+https://github.com/codemicro/macropad</text>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="137.16" y="73.66" smashed="yes" rot="R90">
@@ -5695,6 +5708,10 @@ Source: &lt;a href="http://www.farnell.com/datasheets/391098.pdf"&gt; Data sheet
 </schematic>
 </drawing>
 <compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
 <note version="8.2" severity="warning">
 Since Version 8.2, EAGLE supports online libraries. The ids
 of those online libraries will not be understood (or retained)

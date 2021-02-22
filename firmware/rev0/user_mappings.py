@@ -1,3 +1,10 @@
+# Macropad project, copyright 2021 Thomas Pain
+# https://github.com/codemicro/macropad
+
+# This source code is licensed under the MIT licence. If a copy was
+# not provided with this file, you can obtain one at
+# https://choosealicense.com/licenses/mit/.
+
 import usb_hid
 import time
 from keyboard_controller import Keyboard, Keycode, MediaKeycode

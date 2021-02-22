@@ -1920,6 +1920,21 @@
 <text x="82" y="20.6" size="1.5" layer="22" font="vector" rot="MR0" align="center-left">Macropad rev 0
 Jan 2021</text>
 <text x="49.65" y="26.75" size="1.5" layer="22" font="vector" rot="MR257">001</text>
+<text x="1.6" y="64.95" size="1.778" layer="48">Copyright Thomas Pain 2021
+
+This source describes Open Hardware and is licensed under the CERN-OHL-P
+v2
+
+You may redistribute and modify this documentation and make products 
+using it under the terms of the CERN-OHL-P v2 (https:/cern.ch/cern-ohl).
+This documentation is distributed WITHOUT ANY EXPRESS OR IMPLIED
+WARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS
+FOR A PARTICULAR PURPOSE. Please see the CERN-OHL-P v2 for applicable
+conditions
+
+https://github.com/codemicro/macropad</text>
+<text x="92.8" y="56.7" size="1.016" layer="22" rot="MR0">Licenced under the CERN-OHL-P-2.0
+github.com/codemicro/macropad</text>
 </plain>
 <libraries>
 <library name="diode" urn="urn:adsk.eagle:library:210">

@@ -1,3 +1,17 @@
+# Macropad project, copyright 2021 Thomas Pain
+# https://github.com/codemicro/macropad
+
+# This source code is licensed under the MIT licence. If a copy was
+# not provided with this file, you can obtain one at
+# https://choosealicense.com/licenses/mit/.
+
+# Macropad project, copyright 2021 Thomas Pain
+# https://github.com/codemicro/macropad
+
+# This source code is licensed under the MIT licence. If a copy was
+# not provided with this file, you can obtain one at
+# https://choosealicense.com/licenses/mit/.
+
 import digitalio
 import board
 import time
