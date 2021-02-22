@@ -25,4 +25,4 @@ Functionally perfect, ideal LED position would be below the Pi Pico and not alon
 * Pico SMD support using castellations instead of header pins
   * Maybe options for both on the same board?
 * More/RGB LEDs
-
+* Silkscreen had leftover component labels that I *thought* I'd properly removed (D2, D3)
