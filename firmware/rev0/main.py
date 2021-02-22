@@ -5,6 +5,23 @@ import pins
 # except those won't have checks
 try:
     import user_mappings
+
+    # type checks
+    # reassignments allow for things like "1" to be converted into 1, "True" into True, etc...
+    if user_mappings.NUM_LAYERS:
+        user_mappings.NUM_LAYERS = int(user_mappings.NUM_LAYERS)
+    
+    if user_mappings.SHIFT_KEY != (None, None):
+        assert len(user_mappings.SHIFT_KEY) == 2
+        new = (
+            int(user_mappings.SHIFT_KEY[0]),
+            int(user_mappings.SHIFT_KEY[1])
+        )
+        user_mappings.SHIFT_KEY = new
+        del new
+
+    user_mappings.ENABLE_LEDS = bool(user_mappings.ENABLE_LEDS)
+
 except Exception as e:
     while True:
         print("Error loading user_mappings.py:", e)
