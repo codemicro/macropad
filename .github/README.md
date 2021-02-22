@@ -2,16 +2,12 @@
 
 A project to create a custom macropad based on the Raspberry Pi Pico, including custom hardware and software design.
 
-## Pages
-
-* [Initial prototype board](https://github.com/codemicro/macropad/blob/master/.github/initialPrototype.md)
-
 ## Links
 
 * Raspberry Pi Pico Eagle CAD library - [codemicro/pico-eagle](https://github.com/codemicro/pico-eagle)
 * Cherry MX keyswitche Eagle CAD library - [c0z3n/cherrymx-eagle](https://github.com/c0z3n/cherrymx-eagle)
 
-## rev0 complete!
+## rev0
 
 | **Board scan**                                               | **Assembled**                                                | **Schematic**                                                |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
