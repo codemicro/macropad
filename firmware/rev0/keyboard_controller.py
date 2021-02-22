@@ -6,6 +6,7 @@ from adafruit_hid.consumer_control import ConsumerControl
 from adafruit_hid.keycode import Keycode
 from adafruit_hid.consumer_control_code import ConsumerControlCode as MediaKeycode
 
+
 class Keyboard(kb):
     def __init__(self, usb_devices):
         super().__init__(usb_devices)

@@ -4,10 +4,8 @@ import pins
 # user_mappings must be imported ahead of everything else since other stuff might also import it
 # except those won't have checks
 try:
-    
     import user_mappings
 except Exception as e:
-    pins.WORKING_LED.value = False
     while True:
         print("Error loading user_mappings.py:", e)
         pins.BAD_LED.value = not pins.BAD_LED.value
@@ -15,11 +13,15 @@ except Exception as e:
 
 import led_controller as led_c
 
-led_c.blink(pins.WORKING_LED, 2, after=False)  # this is needed to prevent USB initialisation being stepped on by other stuff (I think?)
+led_c.blink(
+    pins.WORKING_LED, 2, after=False
+)  # this is needed to prevent USB initialisation being stepped on by other stuff (I think?)
 led_c.blink(pins.OK_LED, 0.2)
+
 
 class LetMeOut(Exception):
     pass
+
 
 current_layer = 0
 
@@ -41,7 +43,9 @@ while True:
 
     shift_pressed = False
     if None not in user_mappings.SHIFT_KEY:
-        shift_pressed = pins.MATRIX[user_mappings.SHIFT_KEY[1]][user_mappings.SHIFT_KEY[0]].value
+        shift_pressed = pins.MATRIX[user_mappings.SHIFT_KEY[1]][
+            user_mappings.SHIFT_KEY[0]
+        ].value
 
     matrix_key_pressed = None
 
@@ -51,7 +55,7 @@ while True:
                 if pins.MATRIX[ri][ci].rose:
                     if (ri, ci) != user_mappings.SHIFT_KEY:
                         matrix_key_pressed = (ri, ci)
-                        raise LetMeOut  # nested loop woes        
+                        raise LetMeOut  # nested loop woes
     except LetMeOut:
         pass
 

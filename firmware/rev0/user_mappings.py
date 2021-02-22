@@ -14,9 +14,10 @@ ENABLE_LEDS = True
 SHIFT_KEY = (0, 0)
 
 # this value allows you define the number of layers available on the macropad.
-# if set to 1 or None, only one layer is ever used. The layer number is provided 
+# if set to 1 or None, only one layer is ever used. The layer number is provided
 # to any of the below functions that is called.
 NUM_LAYERS = 1
+
 
 def matrix_0_0(layer):
     pass
