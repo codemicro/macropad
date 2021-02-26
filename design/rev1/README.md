@@ -9,6 +9,7 @@
 * Some surface mount components
   * Also SMD support for boards with castellated pins
 * More/RGB LEDs
+* SD card for configuration
 
 ## Notes
 
