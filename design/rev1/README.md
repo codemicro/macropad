@@ -19,3 +19,4 @@
 * TI SN74HC595N(SR) shift registers - https://datasheet.lcsc.com/szlcsc/1807261022_Texas-Instruments-SN74HC595NSR_C191873.pdf
   * THT from RS-C https://uk.rs-online.com/web/p/counter-ics/2175695/
   * Ben Eater video about shift-registers (sort of) https://www.youtube.com/watch?v=K88pgWhEb1M
+* HOLY SHIT THIS IS COOL https://shop.pimoroni.com/products/adafruit-spi-flash-sd-card-xtsd-512-mb
