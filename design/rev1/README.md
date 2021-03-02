@@ -24,3 +24,10 @@
 ## Design
 
 Stacked dual PCB construction, microcontroller on bottom board, switches, OLED and LEDs mounted on top board. Connected with a [1x16 header](https://shop.pimoroni.com/products/0-100-2-54-mm-female-header-straight?variant=31533818740819) between the two boards and some PCB standoffs.
+
+Pins required (total 13 pins):
+* 3x shift register
+* 3x output column
+* 3x LED
+* 2x power/ground
+* 2x OLED
