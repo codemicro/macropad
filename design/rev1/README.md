@@ -6,6 +6,7 @@
 * OLED display
 * Larger macro matrix (4x3, 4x4?)
 * Different microcontroller
+* SPI/I2C expansion port?
 * ~~Some surface mount components~~ SMD seems annoying, let's omit it
   * ~~Also SMD support for boards with castellated pins~~
 * ~~More/RGB LEDs~~ not enough header pin space
