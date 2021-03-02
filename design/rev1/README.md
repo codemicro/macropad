@@ -31,3 +31,4 @@ Pins required (total 13 pins):
 * 3x LED
 * 2x power/ground
 * 2x OLED
+* 1x reset (perhaps that can go on the bottom board)
