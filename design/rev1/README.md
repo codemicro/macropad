@@ -2,14 +2,14 @@
 
 ## Requirements/aims
 
-* Hotswappable MX compatible switches
+* Hotswappable MX compatible switches (?)
 * OLED display
 * Larger macro matrix (4x3, 4x4?)
 * Different microcontroller
-* Some surface mount components
-  * Also SMD support for boards with castellated pins
-* More/RGB LEDs
-* SD card for configuration
+* ~~Some surface mount components~~ SMD seems annoying, let's omit it
+  * ~~Also SMD support for boards with castellated pins~~
+* ~~More/RGB LEDs~~ not enough header pin space
+* ~~SD card for configuration~~ If this weren't on a weedy ATMega chip, I'd think about it
 
 ## Notes
 
@@ -20,3 +20,7 @@
   * THT from RS-C https://uk.rs-online.com/web/p/counter-ics/2175695/
   * Ben Eater video about shift-registers (sort of) https://www.youtube.com/watch?v=K88pgWhEb1M
 * HOLY SHIT THIS IS COOL https://shop.pimoroni.com/products/adafruit-spi-flash-sd-card-xtsd-512-mb
+
+## Design
+
+Stacked dual PCB construction, microcontroller on bottom board, switches, OLED and LEDs mounted on top board. Connected with a [1x16 header](https://shop.pimoroni.com/products/0-100-2-54-mm-female-header-straight?variant=31533818740819) between the two boards and some PCB standoffs.
